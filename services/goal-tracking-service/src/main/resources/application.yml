@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://localhost:27017/wellnesshub}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+app:
+  resourcesBaseUrl: ${RESOURCES_BASE_URL:http://localhost:8081}
